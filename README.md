@@ -1,4 +1,4 @@
-# python-grahql-example
+# python-graphql-example
 
 This repository is an example how to use GraphQL in the Python language.
 
