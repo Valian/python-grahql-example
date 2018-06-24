@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+# go back to root dir
+cd "${0%/*}/.."
+
+echo "Running manage"
+docker-compose run --rm app python manage.py ${@:1}
+
+# to fix permission problems
+docker-compose run --rm app bash -c "chown -R 1000 . && chgrp -R 1000 ."

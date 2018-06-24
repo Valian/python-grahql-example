@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+# go back to root dir
+cd "${0%/*}/.."
+
+echo "Making migrations"
+docker-compose run --rm app python manage.py makemigrations ${@:1}
+docker-compose run --rm app bash -c "chown -R 1000 . && chgrp -R 1000 ."

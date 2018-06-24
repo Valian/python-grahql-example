@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# go back to root dir
+cd "${0%/*}/.."
+
+
+echo "Running migrations..."
+docker-compose run --rm app python manage.py migrate ${@:1}

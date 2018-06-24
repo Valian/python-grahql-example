@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+# go back to root dir
+cd "${0%/*}/.."
+
+echo "Running init"
+scripts/run-migrate
+
+echo "Creating super user"
+scripts/run-manage createsuperuser
