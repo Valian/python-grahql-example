@@ -1,0 +1,5 @@
+django
+graphene
+graphene-django
+django-filter
+django-graphql-jwt
